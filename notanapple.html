@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<form class="bs-example bs-example-form" data-example-id="simple-input-groups">
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">First Locked Position </span>
+                        <input autofocus="" id="l1" type="text" class="form-control" placeholder="whole # under 11" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div>&nbsp;</div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon2">Second Locked Position </span>
+                        <input id="l2" type="text" class="form-control" placeholder="whole # under 11" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div>&nbsp;</div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">Resistant Location</span>
+                        <input id="rl" type="text" class="form-control" placeholder="whole or half # (eg 4 or 4.5)" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div>&nbsp;</div>
+                    <div class="input-group">
+                        <a href="#" class="btn btn-primary" role="button" onclick="combo(); return false;">Find Combos</a>
+                    </div>
+
+
+                    <div>&nbsp;<br><br><b>Your Combination:</b><br>&nbsp;</div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">First Digit</span>
+                        <input id="d1" type="text" class="form-control" disabled="" placeholder="" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div>&nbsp;</div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">Second Digit(s)</span>
+                        <input id="d2" type="text" class="form-control" disabled="" placeholder="" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div>&nbsp;</div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon3">Third Digit</span>
+                        <input id="d3" type="text" class="form-control" disabled="" placeholder="" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div>&nbsp;</div>
+                    <div class="input-group">
+                        Third digit:
+                        <a id="t1" href="#" class="btn btn-primary" role="button" onclick="combo(1); return false">?</a> or
+                        <a id="t2" href="#" class="btn btn-primary" role="button" onclick="combo(2); return false">?</a>
+                    </div>
+                </form>
+</html>
