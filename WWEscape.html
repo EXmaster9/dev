@@ -1,3 +1,29 @@
+<head><title>Tea Party</title>
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"23dcdc51b74f2eb4dda420545defb730",petok:"c675a6fb54bb7f4f805ccd76bed9dcc9e7a84d09-1445778834-1800",zone:"dashnet.org",rocket:"0",apps:{"ga_key":{"ua":"UA-29324474-2","ga_bs":"2"},"abetterbrowser":{"ie":"8"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=b0bfc08c34/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-29324474-2']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+</head>
+<body>
+
 <script>
 
 var History=new Array();
@@ -59,19 +85,21 @@ Nodes[what].show();
 new Node(
 "hello",
 "Your in jail for 100 days. Choose the right path to escape.<br />You must escape someway. Choose your first path",
-"Steal Cena'\s 50 raisins/raisins|Try to be friends with Cena & Show/friend|Wait 50 days & do nothing/nothing"
+"Steal Cena's 50 raisins/raisins|Try to be friends with Cena & Show/friend|Wait 50 days & do nothing/nothing"
 );
 
 new Node(
 "raisins",
 "How do you do it??",
-"Spend $50 on a catapult (-$50)"
+"Spend $50 on a catapult (-$50)/catapult|Save up/saveup"
 );
 
+/* NOT FINISHED  */
+
 new Node(
-"rain",
-"As the tea was being served, a storm<br>started drizzling inside the porcelain cups",
-"and on it went/storm"
+"catapult",
+"What do you do with the catapult??",
+"Launch over Wan/launch|Sell it to Lee (+$75)/sell"
 );
 
 new Node(
@@ -80,20 +108,24 @@ new Node(
 "I say, indoors/indoors|I say, the garden/garden"
 );
 
+/* NOT FINISHED */
+
 new Node(
-"guest",
-"In comes skeetering Sir Weevil, a top-hat sitting 'tween his antennas<br>Claims the sugarbowl and starts feasting on it.",
-"this did not, however, sit well with the General/upset"
+"friend",
+"You became friends, so they both give you deals."
+"Cena's deal/cenadeal|Show's deal/showdeal"
+);
+
+/* NOT FINISHED */
+
+new Node(
+"cenadeal",
+"Cena offered 10 dollars (+$10)",
+"Accept/ycenadeal|Decline/ncenadeal"
 );
 
 new Node(
-"upset",
-"The General, although known for his calm and patience<br>surprises his audience and challenges Sir Weevil<br>to a match of fisticuffs.",
-"a tremendous fight if there ever was/fight"
-);
-
-new Node(
-"turn",
+"ycenadeal",
 "It appeared that at this very moment<br>a rogue oddity in the space-time continuum<br>happened to cross the General's tea party",
 "and quite disturbed it/disturbance"
 );
