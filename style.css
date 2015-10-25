@@ -30,9 +30,9 @@ font-size:16pt;
 
 width:550px;
 border:double 32px #c09;
- -moz-border-image: url('framea.gif') 32 32 32 32 repeat repeat;
- -webkit-border-image: url('framea.gif') 32 32 32 32 repeat repeat;
-border-image: url('framea.gif') 32 32 32 32 repeat repeat;
+ -moz-border-image: url('http://orteil.dashnet.org/framea.gif') 32 32 32 32 repeat repeat;
+ -webkit-border-image: url('http://orteil.dashnet.org/framea.gif') 32 32 32 32 repeat repeat;
+border-image: url('http://orteil.dashnet.org/framea.gif') 32 32 32 32 repeat repeat;
 margin-left:auto;
 margin-right:auto;
 padding:32px;
