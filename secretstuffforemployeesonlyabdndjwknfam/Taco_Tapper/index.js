@@ -1,27 +1,51 @@
 // getting elements
 var tacocounter = document.getElementById("tacocounter");
 var body = document.getElementById("body");
+var grandpas = document.getElementById("grandpas");
+var stands = document.getElementById("stands");
+var trucks = document.getElementById("trucks");
+var shacks = document.getElementById("shacks");
+var counties = document.getElementById("counties");
+var states = document.getElementById("states");
+var countries = document.getElementById("countries");
+var planets = document.getElementById("planets");
+var solarsystems = document.getElementById("solarsystems");
+var galaxies = document.getElementById("galaxies");
+var universes = document.getElementById("universes");
+var growthrays = document.getElementById("growthrays");
+var lettucelaser = document.getElementById("lettucelasers");
+var meatmountains = document.getElementById("meatmountains");
 // defining taco (the main object of the code)
-var taco = {tacos: 0, el: document.getElementById("taco"), tpc: 1, click: function() {this.tacos = this.tacos + this.tpc;}};
+var taco = {tacos: 0, el: document.getElementById("taco"), click: function() {this.tacos = this.tacos + boosts.tpc;}};
 // defining shop (things that make tacos for you)
 var shop = {};
-shop.buy = function(item, amount){if (taco.tacos >= item.cost) {item.num = item.num + amount; taco.tacos = taco.tacos - item.cost; this.tps = this.tps + item.prod;}};
+shop.buy = function(item, amount, minus){if (taco.tacos >= item.cost) {minus.innerHTML = item.num; item.num = item.num + amount; taco.tacos = taco.tacos - item.cost; this.tps = this.tps + item.prod;}};
 shop.tps = 0;
-shop.grandpas = {num: 0, cost: 100, prod: 1};
-shop.stands = {num: 0, cost: 500, prod: 10}; 
-shop.trucks = {num: 0, cost: 1000, prod: 100};
-shop.shacks = {num: 0, cost: 5000, prod: 1000};
-shop.counties = {num: 0, cost: 10000, prod: 5000};
-shop.states = {num: 0, cost: 50000, prod: 10000};
-shop.countries = {num: 0, cost: 100000, prod: 50000};
-shop.planets = {num: 0, cost: 500000, prod: 100000};
+shop.grandpas =      {num: 0, cost: 100, prod: 1};
+shop.stands =        {num: 0, cost: 500, prod: 5}; 
+shop.trucks =        {num: 0, cost: 1000, prod: 10};
+shop.shacks =        {num: 0, cost: 5000, prod: 50};
+shop.counties =      {num: 0, cost: 10000, prod: 100};
+shop.states =        {num: 0, cost: 50000, prod: 500};
+shop.countries =     {num: 0, cost: 100000, prod: 1000};
+shop.planets =       {num: 0, cost: 500000, prod: 5000};
+shop.solarsystems =  {num: 0, cost: 1000000, prod: 10000};
+shop.galaxies =      {num: 0, cost: 5000000, prod: 50000};
+shop.universes =     {num: 0, cost: 10000000, prod: 100000};
+shop.growthrays =    {num: 0, cost: 50000000, prod: 500000};
+shop.lettucelasers = {num: 0, cost: 100000000, prod: 1000000};
+shop.meatmountains = {num: 0, cost: 500000000, prod: 5000000};
+// defining boosts (things that give you more tpc)
+var boosts = {};
+boosts.buy = function(item, amount, minus) {if (taco.tacos >= item.cost) {minus.innerHTML = item.num; item.num = item.num + amount; taco.tacos = taco.tacos - item.cost; this.tpc = this.tpc + item.prod;}};
+boosts.tpc = 1;
 // sending tacos to html
 setInterval(function(){tacocounter.innerHTML = taco.tacos;}, 10);
 // adding tacos for tps (tacos per second) or tacos made by workers
-setInterval(function(){taco.tacos = taco.tacos + shop.tps;}, 1000);
+setInterval(function(){if (taco.tacos + shop.tps / 10 >= 0.9) {taco.tacos = taco.tacos + shop.tps / 10;} else {taco.tacos = Math.round(taco.tacos + shop.tps / 10);}}, 100);
 // saving feature
 function save() {window.localStorage.tacos = taco.tacos; window.localStorage.tps = shop.tps;}
-setInterval(save(), 15000);
+function importsave() {taco.tacos = window.localStorage.tacos; parseInt(window.localStorage.tps); shop.tps = window.localStorage.tps;}
 // keydowns
 var ee1 = ['e','x','m','a','s','t','e','r','9'];
 var currentButtonIndex = 0;
@@ -30,8 +54,6 @@ var pressedButton;
 var speedClick = false;
 window.addEventListener("keydown", function(evt) {
   //defining all the keys
-  // space
-  if (evt.keyCode == 32 && speedClick === true) {taco.click();}
   //up
   if (evt.keyCode == 38) {pressedButton = 'up';}
   //down
@@ -40,10 +62,6 @@ window.addEventListener("keydown", function(evt) {
   if (evt.keyCode == 37) {pressedButton = 'left';}
   //right
   if (evt.keyCode == 39) {pressedButton = 'right';}
-  //speedClick on
-  if (evt.keyCode == 192 && speedClick === false) {speedClick = true;}
-  //speedClick off
-  if (evt.keyCode == 192 && speedClick === true) {speedClick = false;}
   // numbers:
   //0
   if (evt.keyCode == 48) {pressedButton = '0';}
@@ -126,6 +144,6 @@ window.addEventListener("keydown", function(evt) {
 //key ups
 window.addEventListener("keyup", function(evt) {
     // space
-  if (evt.keyCode == 32 && speedClick === false) {taco.click();}
+  if (evt.keyCode == 32) {taco.click();}
 });
 // to be continued...
