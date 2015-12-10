@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Taco Tapper</title>
+    <style>
+    .center {
+      text-align: center;
+    }
+    @font-face {
+    font-family: Exo;
+    src: url(Exo-Regular.otf);
+    }
+    .exo {
+      font-family: Exo;
+    }
+    body {
+      background-color: #DCFCE0;
+    }
+    #taco:active {
+      border-style: ridge;
+    }
+    #taco {
+      border-style: groove;
+    }
+    .left {
+      text-align: left;
+    }
+    .right {
+      text-align: right;
+    }
+    .imgcenter {
+      display: block; 
+      margin-left: auto; 
+      margin-right: auto;
+    }
+    @font-face {
+    font-family: Quicksand;
+    src: url(Quicksand-Regular.otf);
+    }
+    button.q {
+      font-family: Quicksand;
+    }
+    </style>
+  </head>
+    <body id="body">
+    <h1 id="title" class="center exo">Taco Tapper</h1>
+    <hr />
+    <br /><br /><br />
+    <button class="center q" onclick="shop.buy(shop.grandpas, 1);"><h1>Buy Grandpa</h1></button>
+    <button class="center q" onclick="shop.buy(shop.stands, 1);"><h1>Buy Stand</h1></button>
+    <button class="center q" onclick="shop.buy(shop.trucks, 1);"><h1>Buy Truck</h1></button>
+    <button class="center q" onclick="shop.buy(shop.shacks, 1);"><h1>Buy Shack</h1></button>
+    <button class="center q" onclick="shop.buy(shop.counties, 1);"><h1>Buy County</h1></button>
+    <button class="center q" onclick="shop.buy(shop.states, 1);"><h1>Buy State</h1></button>
+    <button class="center q" onclick="shop.buy(shop.countries, 1);"><h1>Buy Country</h1></button>
+    <button class="center q" onclick="shop.buy(shop.planets, 1);"><h1>Buy Planet</h1></button>
+    <div onclick="taco.click();" id="taco"><img src="taco.png" class="imgcenter"></img></div>
+    <br /><br /><br />
+    <h3 class="center exo">Tacos: </h3><h1 id="tacocounter" class="center exo">0</h1>
+    <script src="index.js"></script>
+  </body>
+</html>
