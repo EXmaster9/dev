@@ -1,5 +1,6 @@
 // getting elements
 var tacocounter = document.getElementById("tacocounter");
+var tpscounter = document.getElementById("tpscounter");
 var body = document.getElementById("body");
 var grandpas = document.getElementById("grandpas");
 var stands = document.getElementById("stands");
@@ -21,28 +22,29 @@ var taco = {tacos: 0, el: document.getElementById("taco"), click: function() {th
 var shop = {};
 shop.buy = function(item, amount, minus){if (taco.tacos >= item.cost) {minus.innerHTML = item.num; item.num = item.num + amount; taco.tacos = taco.tacos - item.cost; this.tps = this.tps + item.prod;}};
 shop.tps = 0;
-shop.grandpas =      {num: 0, cost: 100, prod: 1};
-shop.stands =        {num: 0, cost: 500, prod: 5}; 
-shop.trucks =        {num: 0, cost: 1000, prod: 10};
-shop.shacks =        {num: 0, cost: 5000, prod: 50};
-shop.counties =      {num: 0, cost: 10000, prod: 100};
-shop.states =        {num: 0, cost: 50000, prod: 500};
-shop.countries =     {num: 0, cost: 100000, prod: 1000};
-shop.planets =       {num: 0, cost: 500000, prod: 5000};
-shop.solarsystems =  {num: 0, cost: 1000000, prod: 10000};
-shop.galaxies =      {num: 0, cost: 5000000, prod: 50000};
-shop.universes =     {num: 0, cost: 10000000, prod: 100000};
-shop.growthrays =    {num: 0, cost: 50000000, prod: 500000};
-shop.lettucelasers = {num: 0, cost: 100000000, prod: 1000000};
-shop.meatmountains = {num: 0, cost: 500000000, prod: 5000000};
+shop.grandpas =      {num: 1, cost: 100, prod: 1};
+shop.stands =        {num: 1, cost: 500, prod: 5}; 
+shop.trucks =        {num: 1, cost: 1000, prod: 10};
+shop.shacks =        {num: 1, cost: 5000, prod: 50};
+shop.counties =      {num: 1, cost: 10000, prod: 100};
+shop.states =        {num: 1, cost: 50000, prod: 500};
+shop.countries =     {num: 1, cost: 100000, prod: 1000};
+shop.planets =       {num: 1, cost: 500000, prod: 5000};
+shop.solarsystems =  {num: 1, cost: 1000000, prod: 10000};
+shop.galaxies =      {num: 1, cost: 5000000, prod: 50000};
+shop.universes =     {num: 1, cost: 10000000, prod: 100000};
+shop.growthrays =    {num: 1, cost: 50000000, prod: 500000};
+shop.lettucelasers = {num: 1, cost: 100000000, prod: 1000000};
+shop.meatmountains = {num: 1, cost: 500000000, prod: 5000000};
 // defining boosts (things that give you more tpc)
 var boosts = {};
 boosts.buy = function(item, amount, minus) {if (taco.tacos >= item.cost) {minus.innerHTML = item.num; item.num = item.num + amount; taco.tacos = taco.tacos - item.cost; this.tpc = this.tpc + item.prod;}};
 boosts.tpc = 1;
-// sending tacos to html
+// sending tacos and tps to html
 setInterval(function(){tacocounter.innerHTML = taco.tacos;}, 10);
+setInterval(function(){tpscounter.innerHTML = shop.tps;}, 10);
 // adding tacos for tps (tacos per second) or tacos made by workers
-setInterval(function(){if (taco.tacos + shop.tps / 10 >= 0.9) {taco.tacos = taco.tacos + shop.tps / 10;} else {taco.tacos = Math.round(taco.tacos + shop.tps / 10);}}, 100);
+setInterval(function(){taco.tacos = taco.tacos + shop.tps;}, 1000);
 // saving feature
 function save() {window.localStorage.tacos = taco.tacos; window.localStorage.tps = shop.tps;}
 function importsave() {taco.tacos = window.localStorage.tacos; parseInt(window.localStorage.tps); shop.tps = window.localStorage.tps;}

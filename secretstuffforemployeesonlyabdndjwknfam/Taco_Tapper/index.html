@@ -46,22 +46,24 @@
     <h1 id="title" class="center exo">Taco Tapper</h1>
     <hr />
     <br /><br /><br />
-    <button class="center q" onclick="shop.buy(shop.grandpas, 1, grandpas);"><h1>Buy Grandpa</h1><h5>$100 - 1 tps - <div id="grandpas"></div></h5></button>
-    <button class="center q" onclick="shop.buy(shop.stands, 1);"><h1>Buy Stand</h1><h5>$500 - 5 tps - <div id="stands"></div></h5></button>
-    <button class="center q" onclick="shop.buy(shop.trucks, 1);"><h1>Buy Truck</h1><h5>$1000 - 1 tps - <div id="trucks"></div></h5></button>
-    <button class="center q" onclick="shop.buy(shop.shacks, 1);"><h1>Buy Shack</h1><h5>$5000 - 50 tps - <div id="shacks"></div></h5></button>
-    <button class="center q" onclick="shop.buy(shop.counties, 1);"><h1>Buy County</h1><h5>$10000 - 100 tps - <div id="counties"></div></h5></button>
-    <button class="center q" onclick="shop.buy(shop.states, 1);"><h1>Buy State</h1><h5>$50000 - 500 tps - <div id="states"></div></h5></button>
-    <button class="center q" onclick="shop.buy(shop.countries, 1);"><h1>Buy Country</h1><h5>$100000 - 1000 tps - <div id="countries"></div></h5></button>
-    <button class="center q" onclick="shop.buy(shop.planets, 1);"><h1>Buy Planet</h1><h5>$5000000 - 5000 tps - <div id="planets"></div></h5></button>
-    <button class="center q" onclick="shop.buy(shop.solarsystems, 1);"><h1>Buy Solar System</h1><h5>$1000000 - 10000 tps - <div id="solarsystems"></div></h5></button>
-    <button class="center q" onclick="shop.buy(shop.galaxies, 1);"><h1>Buy Galaxy</h1><h5>$5000000 - 50000 tps - <div id="galaxies"></div></h5></button>
-    <button class="center q" onclick="shop.buy(shop.universes, 1);"><h1>Buy Universe</h1><h5>$10000000 - 100000 tps - <div id="universes"></div></h5></button>
-    <button class="center q" onclick="shop.buy(shop.growthrays, 1);"><h1>Buy Growth Ray</h1><h5>$50000000 - 500000 tps - <div id="growthrays"></div></h5></button>
-    <button class="center q" onclick="shop.buy(shop.lettucelasers, 1);"><h1>Buy Lettuce Laser</h1><h5>$100000000 - 1000000 tps - <div id="lettucelasers"></div></h5></button>
+    <button class="center q" onclick="shop.buy(shop.grandpas, 1, grandpas);"><h1>Buy Grandpa</h1><h5>$100 - 1 tps - <div id="grandpas">0</div></h5></button>
+    <button class="center q" onclick="shop.buy(shop.stands, 1);"><h1>Buy Stand</h1><h5>$500 - 5 tps - <div id="stands">0</div></h5></button>
+    <button class="center q" onclick="shop.buy(shop.trucks, 1);"><h1>Buy Truck</h1><h5>$1000 - 1 tps - <div id="trucks">0</div></h5></button>
+    <button class="center q" onclick="shop.buy(shop.shacks, 1);"><h1>Buy Shack</h1><h5>$5000 - 50 tps - <div id="shacks">0</div></h5></button>
+    <button class="center q" onclick="shop.buy(shop.counties, 1);"><h1>Buy County</h1><h5>$10000 - 100 tps - <div id="counties">0</div></h5></button>
+    <button class="center q" onclick="shop.buy(shop.states, 1);"><h1>Buy State</h1><h5>$50000 - 500 tps - <div id="states">0</div></h5></button>
+    <button class="center q" onclick="shop.buy(shop.countries, 1);"><h1>Buy Country</h1><h5>$100000 - 1000 tps - <div id="countries">0</div></h5></button>
+    <button class="center q" onclick="shop.buy(shop.planets, 1);"><h1>Buy Planet</h1><h5>$5000000 - 5000 tps - <div id="planets">0</div></h5></button>
+    <button class="center q" onclick="shop.buy(shop.solarsystems, 1);"><h1>Buy Solar System</h1><h5>$1000000 - 10000 tps - <div id="solarsystems">0</div></h5></button>
+    <button class="center q" onclick="shop.buy(shop.galaxies, 1);"><h1>Buy Galaxy</h1><h5>$5000000 - 50000 tps - <div id="galaxies">0</div></h5></button>
+    <button class="center q" onclick="shop.buy(shop.universes, 1);"><h1>Buy Universe</h1><h5>$10000000 - 100000 tps - <div id="universes">0</div></h5></button>
+    <button class="center q" onclick="shop.buy(shop.growthrays, 1);"><h1>Buy Growth Ray</h1><h5>$50000000 - 500000 tps - <div id="growthrays">0</div></h5></button>
+    <button class="center q" onclick="shop.buy(shop.lettucelasers, 1);"><h1>Buy Lettuce Laser</h1><h5>$100000000 - 1000000 tps - <div id="lettucelasers">0</div></h5></button>
     <div onclick="taco.click();" id="taco"><img src="taco.png" class="imgcenter"></img></div>
-    <br /><br /><br />
+    <br /><br />
     <h3 class="center exo">Tacos: </h3><h1 id="tacocounter" class="center exo">0</h1>
+    <br />
+    <h3 class="center exo">TPS: </h3><h1 id="tpscounter" class="center exo">0</h1>
     <script src="index.js"></script>
   </body>
 </html>
