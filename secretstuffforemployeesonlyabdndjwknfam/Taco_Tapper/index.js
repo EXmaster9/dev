@@ -16,6 +16,8 @@ var universes = document.getElementById("universes");
 var growthrays = document.getElementById("growthrays");
 var lettucelaser = document.getElementById("lettucelasers");
 var meatmountains = document.getElementById("meatmountains");
+// and now for the boosts
+var doubletappers = document.getElementById("doubletappers");
 // defining taco (the main object of the code)
 var taco = {tacos: 0, el: document.getElementById("taco"), click: function() {this.tacos = this.tacos + boosts.tpc;}};
 // defining shop (things that make tacos for you)
@@ -40,6 +42,7 @@ shop.meatmountains = {num: 1, cost: 500000000, prod: 5000000};
 var boosts = {};
 boosts.buy = function(item, amount, minus) {if (taco.tacos >= item.cost) {minus.innerHTML = item.num; item.num = item.num + amount; taco.tacos = taco.tacos - item.cost; this.tpc = this.tpc + item.prod;}};
 boosts.tpc = 1;
+boosts.doubletappers = {num: 1, cost: 1000, prod: 1};
 // sending tacos and tps to html
 setInterval(function(){tacocounter.innerHTML = taco.tacos;}, 10);
 setInterval(function(){tpscounter.innerHTML = shop.tps;}, 10);
