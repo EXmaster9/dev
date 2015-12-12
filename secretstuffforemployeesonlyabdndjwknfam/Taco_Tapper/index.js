@@ -19,7 +19,8 @@ var lettucelaser = document.getElementById("lettucelasers");
 var meatmountains = document.getElementById("meatmountains");
 // and now for the boosts
 var doubletappers = document.getElementById("doubletappers");
-//double tapper
+var duplicators = document.getElementById("duplicators");
+// boost affordality
 var boostAfford = false;
 // defining taco (the main object of the code)
 var taco = {tacos: 0, el: document.getElementById("taco"), click: function() {this.tacos = this.tacos + boosts.tpc;}};
@@ -43,9 +44,10 @@ shop.lettucelasers = {num: 1, cost: 100000000, prod: 1000000};
 shop.meatmountains = {num: 1, cost: 500000000, prod: 5000000};
 // defining boosts (things that give you more tpc)
 var boosts = {};
-boosts.buy = function(item, amount, minus) {if (taco.tacos >= item.cost * amount && doubleTapperAfford === true) {minus.innerHTML = item.num; item.num = item.num + amount; taco.tacos = taco.tacos - item.cost * amount; this.tpc = this.tpc + item.prod;}};
+boosts.buy = function(item, amount, minus) {if (taco.tacos >= item.cost * amount && boostAfford === true) {minus.innerHTML = item.num; item.num = item.num + amount; taco.tacos = taco.tacos - item.cost * amount; this.tpc = this.tpc + item.prod;}};
 boosts.tpc = 1;
-boosts.doubletappers = {num: 1, cost: 1000, prod: 1};
+boosts.doubletappers = {num: 1, cost: 10000, prod: 1};
+boosts.duplicators = {num: 1, cost: 100000, prod: 5};
 // sending tacos and tps to html
 setInterval(function(){tacocounter.innerHTML = taco.tacos;}, 10);
 setInterval(function(){tpscounter.innerHTML = shop.tps;}, 10);
