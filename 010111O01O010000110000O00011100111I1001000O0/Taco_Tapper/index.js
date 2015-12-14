@@ -3,6 +3,7 @@ var tacocounter = document.getElementById("tacocounter");
 var tpscounter = document.getElementById("tpscounter");
 var body = document.getElementById("body");
 var title = document.getElementById("tabname");
+var tpccounter = document.getElementById("tpccounter");
 // and now for the shop
 var grandpas = document.getElementById("grandpas");
 var stands = document.getElementById("stands");
@@ -49,11 +50,17 @@ boosts.buy = function(item, amount, minus) {if (taco.tacos >= item.cost * amount
 boosts.tpc = 1;
 boosts.doubletappers = {num: 1, cost: 10000, prod: 1};
 boosts.duplicators = {num: 1, cost: 1000000, prod: 100};
-// sending tacos and tps to html
+// sending tacos, tps, and tpc to html
 setInterval(function(){tacocounter.innerHTML = taco.tacos; title.innerHTML = taco.tacos + " Tacos";}, 10);
 setInterval(function(){tpscounter.innerHTML = shop.tps;}, 10);
+setInterval(function(){tpccounter.innerHTML = boosts.tpc;}, 1000);
 // adding tacos for tps (tacos per second) or tacos made by workers
 setInterval(function(){taco.tacos = taco.tacos + shop.tps;}, 1000);
+// saving tacos
+function save() {window.localStorage.tacos = parseInt(taco.tacos); window.localStorage.tps = parseInt(shop.tps); window.localStorage.tpc = parseInt(boosts.tpc);}
+function importSave() {taco.tacos = parseInt(window.localStorage.tacos); shop.tps = parseInt(window.localStorage.tps); boosts.tpc = parseInt(window.localStorage.tpc);}
+window.onload = function(){importSave();};
+setInterval(function(){save();}, 30000);
 // keydowns
 window.addEventListener("keydown", function(evt) {
   //defining all the keys
