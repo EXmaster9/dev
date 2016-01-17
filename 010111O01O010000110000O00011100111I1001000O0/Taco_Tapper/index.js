@@ -61,6 +61,8 @@ function save() {window.localStorage.tacos = parseInt(taco.tacos); window.localS
 function importSave() {taco.tacos = parseInt(window.localStorage.tacos); shop.tps = parseInt(window.localStorage.tps); boosts.tpc = parseInt(window.localStorage.tpc);}
 window.onload = function(){importSave();};
 setInterval(function(){save();}, 30000);
+// reset
+taco.reset = function(){taco.tacos = 0; boosts.tpc = 1; shop.tps = 0;};
 // keydowns
 window.addEventListener("keydown", function(evt) {
   //defining all the keys
