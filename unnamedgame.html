@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tree</title>
+    <title>Unnamed Game</title>
 </head>
 <body>
  <canvas id="canvas" style="border:1px solid #000"></canvas>
+ <div id="heightcounter" style="font-family: Helvetica;">10</div>
 <script>
 (function () {
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
@@ -28,7 +29,9 @@ var canvas = document.getElementById("canvas"),
     },
     keys = [],
     friction = 0.8,
-    gravity = 0.2;
+    gravity = 0.1;
+    
+var heightcounter = document.getElementById("heightcounter");
 
 var boxes = [];
 
@@ -80,6 +83,8 @@ boxes.push({
 canvas.width = width;
 canvas.height = height;
 
+setInterval(function(){heightcounter.innerHTML = player.height;}, 10);
+
 function update() {
     // check keys
     if (keys[38] || keys[32] || keys[87]) {
@@ -102,13 +107,13 @@ function update() {
             player.velX--;
         }
     }
-    if (keys[13] && player.height <= 100) {
+    if (keys[13] && player.height < 150) {
       player.height = player.height + 1
-      gravity = gravity - 0.0015
-    }
-    if (keys[16] && player.height >= 5) {
-      player.height = player.height - 1
       gravity = gravity + 0.0015
+    }
+    if (keys[16] && player.height > 5) {
+      player.height = player.height - 1
+      gravity = gravity - 0.0015
     }
     player.velX *= friction;
     player.velY += gravity;
@@ -182,6 +187,24 @@ function colCheck(shapeA, shapeB) {
         }
     }
     return colDir;
+}
+
+function hashtaghashtag() {
+  if (player.height == 15 && player.x == 400 && player.y == 135) {
+    var secretcode = prompt("code:");
+    if (secretcode == "8675309") {
+      var newspeed = prompt("8675309:");
+      player.speed = newspeed;
+    }
+    if (secretcode == "EX") {
+      gravity = 0;
+    }
+    if (secretcode == "derp") {
+      player.height = 151;
+    }
+  }else{
+    alert("nope");
+  }
 }
 
 document.body.addEventListener("keydown", function (e) {
