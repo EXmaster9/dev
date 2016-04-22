@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Stretch Block</title>
+    <title>Tree</title>
 </head>
 <body>
  <canvas id="canvas" style="border:1px solid #000"></canvas>
@@ -33,6 +33,8 @@ var canvas = document.getElementById("canvas"),
     
 var heightcounter = document.getElementById("heightcounter");
 
+
+
 var boxes = [];
 
 // dimensions
@@ -62,6 +64,12 @@ boxes.push({
     height: 160
 });
 boxes.push({
+    x: 240,
+    y: 100,
+    width: 160,
+    height: 160
+});
+boxes.push({
     x: 340,
     y: 150,
     width: 160,
@@ -78,6 +86,12 @@ boxes.push({
     y: 300,
     width: 200,
     height: 20
+});
+boxes.push({
+    x: 200,
+    y: 300,
+    width: 2,
+    height: 2
 });
 
 canvas.width = width;
@@ -107,14 +121,15 @@ function update() {
             player.velX--;
         }
     }
-    if (keys[13] && player.height < 150) {
+    if (keys[13] && player.height < 150 && player.long === true) {
       player.height = player.height + 1
       gravity = gravity + 0.0015
     }
-    if (keys[16] && player.height > 5) {
+    if (keys[16] && player.height > 5 && player.long === true) {
       player.height = player.height - 1
       gravity = gravity - 0.0015
     }
+    if (keys[])
     player.velX *= friction;
     player.velY += gravity;
 
@@ -143,6 +158,9 @@ function update() {
     if(player.grounded){
          player.velY = 0;
     }
+    if (player.x >= 195 && player.x <= 205 && player.y >= 295 && player.y <= 305) {
+  window.open("http://ex-games.org/dev/stretch2.html");
+}
     
     player.x += player.velX;
     player.y += player.velY;
