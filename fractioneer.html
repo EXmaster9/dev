@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fractioneer</title>
+    <style>
+      @font-face {
+        font-family: molot;
+        src: url(Molot.otf);
+      }
+      @font-face {
+        font-family: slksc;
+        src: url(slkscr.ttf);
+      }
+      .center {
+        text-align: center;
+      }
+      .left {
+        text-align: left;
+      }
+      .right {
+        text-align: right;
+      }
+      #clicker, .molot{
+        font-family: molot;
+      }
+      .shop, .slksc {
+        font-family: slksc;
+      }
+      body {
+        background-color: #D1F4FF;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="center molot">Fractioneer</h1>
+    <div id="clicker" class="center">
+    <button onclick="frac.click();"><h2 class="molot">Fractionate</h2></button>
+    <h3><h3 id="buckaroony">1</h3> <h3 id="words">Buckaroonies</h3></h3>
+    <br /><h3 id="percent">10</h3><h3>Percentaroony</h3>
+    <script src="main.js"></script>
+    </div>
+    <div class="left shop">
+      <h3>Percentaroony Shop</h3>
+      <h4>
+        <button class="slksc" onclick="frac.percent.buy(1,8);">+1%<hr /><div id="bp1">8</div> bux</button>
+        <button class="slksc" onclick="frac.percent.buy(10,64);">+10%<hr /><div id="bp2">64</div> bux</button>
+      </h4>
+    </div>
+  </body>
+</html>
