@@ -35,7 +35,7 @@ frac.sendbux = function () {
   }else{
     frac.words.innerHTML = "Buckaroonies";
   }
-  frac.percentel.innerHTML = frac.percent;
+  frac.percentel.innerHTML = frac.percent.num;
 };
 setInterval(function (){frac.sendbux();}, 100);
 frac.percent.buy = function (amnt,cost) {
