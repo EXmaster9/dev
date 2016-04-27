@@ -22,7 +22,7 @@ frac.percent.num = 10;
 frac.backupbux = 1;
 frac.click = function () {
   var fracnumber = Math.floor((Math.random() * 100));
-  if (fracnumber <= frac.percent) {
+  if (fracnumber <= frac.percent.num) {
     frac.buckaroonies = frac.buckaroonies * 2;
   }else{
     frac.buckaroonies = frac.backupbux;
