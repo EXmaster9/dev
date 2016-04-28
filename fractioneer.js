@@ -18,8 +18,10 @@ frac.words = document.getElementById("words");
 frac.percentel = document.getElementById("percent");
 frac.buckaroonies = 1;
 frac.percent = {};
-frac.percent.num = 10;
+frac.percent.num = 50;
 frac.backupbux = 1;
+frac.percent.shopcost = {};
+frac.percent.shopcost = {cost:8, addition:1};
 frac.click = function () {
   var fracnumber = Math.floor((Math.random() * 100));
   if (fracnumber <= frac.percent.num) {
@@ -38,7 +40,9 @@ frac.sendbux = function () {
   frac.percentel.innerHTML = frac.percent.num;
 };
 setInterval(function (){frac.sendbux();}, 100);
-frac.percent.buy = function (amnt,cost) {
-  
-  
+
+// The most complicated buying function ever created:
+frac.buy = function (cost,addition,quan) {
+  frac.buckaroonies = frac.buckaroonies - cost;
+  addition = addition + quan;
 };
