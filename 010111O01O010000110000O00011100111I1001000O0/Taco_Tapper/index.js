@@ -57,8 +57,8 @@ setInterval(function(){tpccounter.innerHTML = boosts.tpc;}, 1000);
 // adding tacos for tps (tacos per second) or tacos made by workers
 setInterval(function(){taco.tacos = taco.tacos + shop.tps;}, 1000);
 // saving tacos
-function save() {window.localStorage.tacos = parseInt(taco.tacos); window.localStorage.tps = parseInt(shop.tps); window.localStorage.tpc = parseInt(boosts.tpc);window.localStorage.shop = parseObject(shop);}
-function importSave() {shop = parseObject(window.localStorage.shop); taco.tacos = parseInt(window.localStorage.tacos); shop.tps = parseInt(window.localStorage.tps); boosts.tpc = parseInt(window.localStorage.tpc);}
+function save() {window.localStorage.tacos = parseInt(taco.tacos); window.localStorage.tps = parseInt(shop.tps); window.localStorage.tpc = parseInt(boosts.tpc);window.localStorage.shop = Parse.Object(shop);}
+function importSave() {shop = Parse.Object(window.localStorage.shop); taco.tacos = parseInt(window.localStorage.tacos); shop.tps = parseInt(window.localStorage.tps); boosts.tpc = parseInt(window.localStorage.tpc);}
 window.onload = function(){importSave();
 };
 setInterval(function(){save();}, 30000);
