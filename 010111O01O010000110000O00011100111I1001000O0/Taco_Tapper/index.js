@@ -28,7 +28,7 @@ var boostAfford = false;
 var taco = {tacos: 0, el: document.getElementById("taco"), click: function() {this.tacos = this.tacos + boosts.tpc;}};
 // defining shop (things that make tacos for you)
 var shop = {};
-shop.buy = function(item, amount, minus){if (taco.tacos >= item.cost) {item.num = item.num + amount; taco.tacos = taco.tacos - item.cost; this.tps = this.tps + item.prod; item.cost = item.cost * 1.25; minus.innerHTML = item.cost;} if (item.cost >= 1000) {boostAfford = true;}};
+shop.buy = function(item, amount, minus){if (taco.tacos >= item.cost) {item.num = item.num + amount; taco.tacos = taco.tacos - item.cost; this.tps = this.tps + item.prod; item.cost = item.cost * 1.5; minus.innerHTML = item.cost;} if (item.cost >= 1000) {boostAfford = true;}};
 shop.tps = 0;
 shop.grandpas =      {num: 1, cost: 100,       prod: 1};
 shop.stands =        {num: 1, cost: 500,       prod: 5}; 
@@ -57,9 +57,10 @@ setInterval(function(){tpccounter.innerHTML = boosts.tpc;}, 1000);
 // adding tacos for tps (tacos per second) or tacos made by workers
 setInterval(function(){taco.tacos = taco.tacos + shop.tps;}, 1000);
 // saving tacos
-function save() {window.localStorage.tacos = parseInt(taco.tacos); window.localStorage.tps = parseInt(shop.tps); window.localStorage.tpc = parseInt(boosts.tpc);}
-function importSave() {taco.tacos = parseInt(window.localStorage.tacos); shop.tps = parseInt(window.localStorage.tps); boosts.tpc = parseInt(window.localStorage.tpc);}
-window.onload = function(){importSave();};
+function save() {window.localStorage.tacos = parseInt(taco.tacos); window.localStorage.tps = parseInt(shop.tps); window.localStorage.tpc = parseInt(boosts.tpc);window.localStorage.shop = parseObject(shop);}
+function importSave() {shop = parseObject(window.localStorage.shop); taco.tacos = parseInt(window.localStorage.tacos); shop.tps = parseInt(window.localStorage.tps); boosts.tpc = parseInt(window.localStorage.tpc);}
+window.onload = function(){importSave();
+};
 setInterval(function(){save();}, 30000);
 // reset
 taco.reset = function(){taco.tacos = 0; boosts.tpc = 1; shop.tps = 0;};
