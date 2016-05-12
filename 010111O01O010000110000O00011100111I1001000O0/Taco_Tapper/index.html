@@ -25,11 +25,11 @@
     }
     @font-face {
     font-family: Exo;
-    color: white;
     src: url(Exo-Regular.otf);
     }
     .exo {
       font-family: Exo;
+      color: white;
     }
     body {
       background: url(http://www.magic4walls.com/wp-content/uploads/2014/02/texture-dark-noise-background-metal.jpg);
@@ -41,7 +41,7 @@
     #taco {
       border-style: groove;
       border-color: black;
-      background-color: #CCFFD2;
+      background-color: gray;
     }
     .left {
       text-align: left;
@@ -56,7 +56,6 @@
     }
     @font-face {
     font-family: Quicksand;
-    color: white;
     src: url(Quicksand-Regular.otf);
     }
     button.q {
@@ -66,7 +65,9 @@
     button {
       font-family: Quicksand;
       border-width: 5px;
-      border-style: ridge;
+      border-style: groove;
+      background-color: gray;
+      color: white;
     }
     button.h {
       color: darkblue;
@@ -78,7 +79,7 @@
     <body id="body">
     <h1 id="title" class="center exo">Taco Tapper</h1>
     <button><h1 class="center exo" onclick="taco.reset();">Reset</h1></button>
-    <hr style="color: darkgray;"/>
+    <hr style="color: gray;"/>
     <br /><br />
     <button class="center q" onclick="shop.buy(shop.grandpas, 1, grandpas);"><h1>Buy Grandpa</h1><h5>$100 - 1 tps - <div id="grandpas">0</div></h5></button>
     <button class="center q" onclick="shop.buy(shop.stands, 1, stands);"><h1>Buy Stand</h1><h5>$500 - 5 tps - <div id="stands">0</div></h5></button>
