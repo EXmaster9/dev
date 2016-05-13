@@ -94,4 +94,23 @@ window.addEventListener("keyup", function(evt) {
     // space
   if (evt.keyCode == 32) {taco.click();}
 });
-// to be continued...
+// saving prices
+function savePrice() {
+  window.localStorage.grandpas = parseInt(shop.grandpas.cost);
+window.localStorage.stands = parseInt(shop.stands.cost);
+window.localStorage.trucks = parseInt(shop.trucks.cost);
+window.localStorage.shacks = parseInt(shop.shacks.cost);
+window.localStorage.counties = parseInt(shop.counties.cost);
+window.localStorage.states = parseInt(shop.states.cost);
+window.localStorage.countries = parseInt(shop.countries.cost);
+window.localStorage.planets = parseInt(shop.planets.cost);
+window.localStorage.solar systems = parseInt(shop.solarsystems.cost);
+window.localStorage.galaxies = parseInt(shop.galaxies.cost);
+window.localStorage.universes = parseInt(shop.universes.cost);
+window.localStorage.growth rays = parseInt(shop.growthrays.cost);
+window.localStorage.lettuce lasers = parseInt(shop.lettucelasers.cost);
+window.localStorage.meat mountains = parseInt(shop.meatmountains.cost);
+}
+importPrice() {
+  shop.grandpas.cost = 
+}
