@@ -62,6 +62,8 @@ function importSave() {importPrice(); taco.tacos = parseInt(window.localStorage.
 window.onload = function(){importSave();
 };
 setInterval(function(){save();}, 30000);
+// super tacoz
+var supertacoz = false
 // reset
 taco.reset = function(){taco.tacos = 0; boosts.tpc = 1; shop.tps = 0; resetPrice();};
 // keydowns
@@ -89,7 +91,9 @@ window.addEventListener("keydown", function(evt) {
   //9
   if (evt.keyCode == 57) {shop.buy(shop.solarsystems, 1, solarsystems);}
   // \
-  if (evt.keyCode == 220) {shop.tps = shop.tps * shop.tps}
+  if (evt.keyCode == 220) {supertacoz = true;}
+  // [
+  if (evt.keyCode == 220 && supertacoz === true) {shop.tps = shop.tps * 2;}
 });
 //key ups
 window.addEventListener("keyup", function(evt) {
