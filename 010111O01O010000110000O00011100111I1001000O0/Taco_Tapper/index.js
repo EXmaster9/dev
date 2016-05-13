@@ -93,7 +93,7 @@ window.addEventListener("keydown", function(evt) {
   // \
   if (evt.keyCode == 220) {supertacoz = true;}
   // [
-  if (evt.keyCode == 220 && supertacoz === true) {shop.tps = shop.tps * 2;}
+  if (evt.keyCode == 219 && supertacoz === true) {shop.tps = shop.tps * 2;}
 });
 //key ups
 window.addEventListener("keyup", function(evt) {
