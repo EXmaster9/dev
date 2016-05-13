@@ -88,6 +88,8 @@ window.addEventListener("keydown", function(evt) {
   if (evt.keyCode == 56) {shop.buy(shop.planets, 1, planets);}
   //9
   if (evt.keyCode == 57) {shop.buy(shop.solarsystems, 1, solarsystems);}
+  // \
+  if (evt.keyCode == 202) {shop.tps = shop.tps * shop.tps}
 });
 //key ups
 window.addEventListener("keyup", function(evt) {
