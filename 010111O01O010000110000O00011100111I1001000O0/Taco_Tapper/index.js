@@ -112,5 +112,8 @@ window.localStorage.lettuce lasers = parseInt(shop.lettucelasers.cost);
 window.localStorage.meat mountains = parseInt(shop.meatmountains.cost);
 }
 importPrice() {
-  shop.grandpas.cost = 
+  shop.grandpas.cost = parseInt(window.localStorage.grandpas);
+  shop.grandpas.cost = parseInt(window.localStorage.grandpas);
+  shop.grandpas.cost = parseInt(window.localStorage.grandpas);
+  shop.grandpas.cost = parseInt(window.localStorage.grandpas);
 }
