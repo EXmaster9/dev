@@ -57,8 +57,8 @@ setInterval(function(){tpccounter.innerHTML = boosts.tpc;}, 1000);
 // adding tacos for tps (tacos per second) or tacos made by workers
 setInterval(function(){taco.tacos = taco.tacos + shop.tps;}, 1000);
 // saving tacos
-function save() {window.localStorage.tacos = parseInt(taco.tacos); window.localStorage.tps = parseInt(shop.tps); window.localStorage.tpc = parseInt(boosts.tpc);}
-function importSave() {taco.tacos = parseInt(window.localStorage.tacos); shop.tps = parseInt(window.localStorage.tps); boosts.tpc = parseInt(window.localStorage.tpc);}
+function save() {savePrice(); window.localStorage.tacos = parseInt(taco.tacos); window.localStorage.tps = parseInt(shop.tps); window.localStorage.tpc = parseInt(boosts.tpc);}
+function importSave() {importPrice(); taco.tacos = parseInt(window.localStorage.tacos); shop.tps = parseInt(window.localStorage.tps); boosts.tpc = parseInt(window.localStorage.tpc);}
 window.onload = function(){importSave();
 };
 setInterval(function(){save();}, 30000);
@@ -111,9 +111,19 @@ window.localStorage.growth rays = parseInt(shop.growthrays.cost);
 window.localStorage.lettuce lasers = parseInt(shop.lettucelasers.cost);
 window.localStorage.meat mountains = parseInt(shop.meatmountains.cost);
 }
-importPrice() {
+function importPrice() {
   shop.grandpas.cost = parseInt(window.localStorage.grandpas);
-  shop.grandpas.cost = parseInt(window.localStorage.grandpas);
-  shop.grandpas.cost = parseInt(window.localStorage.grandpas);
-  shop.grandpas.cost = parseInt(window.localStorage.grandpas);
+  shop.stands.cost = parseInt(window.localStorage.stands);
+  shop.trucks.cost = parseInt(window.localStorage.trucks);
+  shop.shacks.cost = parseInt(window.localStorage.shacks);
+  shop.counties.cost = parseInt(window.localStorage.counties);
+  shop.states.cost = parseInt(window.localStorage.states);
+  shop.countries.cost = parseInt(window.localStorage.countries);
+  shop.planets.cost = parseInt(window.localStorage.planets);
+  shop.solarsystems.cost = parseInt(window.localStorage.solarsystems);
+  shop.galaxies.cost = parseInt(window.localStorage.galaxies);
+  shop.universes.cost = parseInt(window.localStorage.universes);
+  shop.growthrays.cost = parseInt(window.localStorage.growthrays);
+  shop.lettucelasers.cost = parseInt(window.localStorage.lettucelasers);
+  shop.meatmountains.cost = parseInt(window.localStorage.meatmountains);
 }
