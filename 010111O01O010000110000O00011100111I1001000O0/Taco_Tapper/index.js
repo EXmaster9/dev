@@ -28,7 +28,7 @@ var boostAfford = false;
 var taco = {tacos: 0, el: document.getElementById("taco"), click: function() {this.tacos = this.tacos + boosts.tpc;}};
 // defining shop (things that make tacos for you)
 var shop = {};
-shop.buy = function(item, amount, minus){if (taco.tacos >= item.cost) {item.num = item.num + amount; taco.tacos = taco.tacos - item.cost; this.tps = this.tps + item.prod; item.cost = item.cost * 1.5; minus.innerHTML = item.cost;} if (item.cost >= 1000) {boostAfford = true;}};
+shop.buy = function(item, amount, minus){if (taco.tacos >= item.cost) {item.num = item.num + amount; taco.tacos = taco.tacos - item.cost; this.tps = this.tps + item.prod; item.cost = Math.round(item.cost * 1.5); minus.innerHTML = item.cost;} if (item.cost >= 1000) {boostAfford = true;}};
 shop.tps = 0;
 shop.grandpas =      {num: 1, cost: 100,       prod: 1};
 shop.stands =        {num: 1, cost: 500,       prod: 5}; 
