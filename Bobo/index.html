@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+ <!--(           )       -->
+ <!--( )\       ( /(       -->
+ <!--)((_)  (   )\())  (   -->
+ <!--((_)_   )\ ((_)\   )\  -->
+ <!--| _ ) ((_)| |(_) ((_) -->
+ <!--| _ \/ _ \| '_ \/ _ \ -->
+ <!--|___/\___/|_.__/\___/ -->
+                       
+<html>
+  <head>
+    <title>Bobo</title>
+    <style>
+      body {
+        background: #E8EAFA;
+        background: -webkit-linear-gradient(-90deg, #D3D4E2, #E8EAFA, #D3D4E2); 
+        background: -o-linear-gradient(-90deg, #D3D4E2, #E8EAFA, #D3D4E2); 
+        background: -moz-linear-gradient(-90deg, #D3D4E2, #E8EAFA, #D3D4E2); 
+        background: linear-gradient(-90deg, #D3D4E2, #E8EAFA, #D3D4E2);
+      }
+      @font-face {
+        font-family: Font;
+        src: url(Barrio-Regular.otf);
+      }
+      * {
+        font-family: Font;
+      }
+      .center {
+        text-align: center;
+        position: center;
+      }
+      #bobo {
+        border-style: solid;
+        padding: 20px 20px 20px 20px;
+        -moz-border-radius: 10px;
+	      -webkit-border-radius: 10px;
+	      border-radius: 10px;
+	      border-color: #071108;
+	      border-width: 2px;
+	      background-color: #C0C1CE;
+	      -moz-transition: padding 2s, background-color 2s;
+        -webkit-transition: padding 2s, background-color 2s;
+        transition: padding 2s, background-color 2s;
+      }
+      .big {
+        font-size: 72px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      #progressshield {
+        background: -webkit-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -o-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -moz-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6);
+        position: relative;
+        width: 100%;
+        height: 30px;
+        background-color: #C0C1CE;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }
+      #barshield {
+        position: absolute;
+        width: 1%;
+        height: 100%;
+        background-color: #004FFF;
+        -moz-transition: width 2s;
+        -webkit-transition: width 2s;
+        transition: width 2s;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }
+      #progresshealth {
+        background: -webkit-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -o-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -moz-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6);
+        position: relative;
+        width: 100%;
+        height: 30px;
+        background-color: #C0C1CE;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }
+      #barhealth {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #004FFF;
+        -moz-transition: width 2s;
+        -webkit-transition: width 2s;
+        transition: width 2s;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }
+      #progressattack {
+        background: -webkit-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -o-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -moz-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6);
+        position: relative;
+        width: 100%;
+        height: 30px;
+        background-color: #C0C1CE;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }
+      #barattack {
+        position: absolute;
+        width: 1%;
+        height: 100%;
+        background-color: #004FFF;
+        -moz-transition: width 2s;
+        -webkit-transition: width 2s;
+        transition: width 2s;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }
+      #progressrange {
+        background: -webkit-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -o-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -moz-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6);
+        position: relative;
+        width: 100%;
+        height: 30px;
+        background-color: #C0C1CE;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }
+      #barrange {
+        position: absolute;
+        width: 1%;
+        height: 100%;
+        background-color: #004FFF;
+        -moz-transition: width 2s;
+        -webkit-transition: width 2s;
+        transition: width 2s;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }
+      #progresshunger {
+        background: -webkit-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -o-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -moz-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6);
+        position: relative;
+        width: 100%;
+        height: 30px;
+        background-color: #C0C1CE;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }
+      #barhunger {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #004FFF;
+        -moz-transition: width 2s;
+        -webkit-transition: width 2s;
+        transition: width 2s;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }#progresshygiene {
+        background: -webkit-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -o-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -moz-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6);
+        position: relative;
+        width: 100%;
+        height: 30px;
+        background-color: #C0C1CE;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }
+      #barhygiene {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #004FFF;
+        -moz-transition: width 2s;
+        -webkit-transition: width 2s;
+        transition: width 2s;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }#progresshappiness {
+        background: -webkit-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -o-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -moz-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6);
+        position: relative;
+        width: 100%;
+        height: 30px;
+        background-color: #C0C1CE;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }
+      #barhappiness {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #004FFF;
+        -moz-transition: width 2s;
+        -webkit-transition: width 2s;
+        transition: width 2s;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }
+      #bobo:hover {
+        padding: 50px 50px 50px 50px;
+        background-color: #071108;
+      }
+      button {
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+	      padding-top: 5px;
+	      padding-left: 7px;
+        -moz-transition: background-color 1s, color 3s;
+        -webkit-transition: background-color 1s, color 3s;
+        transition: background-color 1s, color 3s;
+        background-color: #003ABA;
+        border-style: none;
+        font-family: Font;
+        color: #E8EAFA;
+	      padding-top: 5px;
+	      margin-right: 100px;
+	      font-size: 24px;
+      }
+      button:hover {
+        background-color: #071108;
+        color: #003ABA;
+      }
+      button:active {
+        -moz-border-radius: 10px;
+	      -webkit-border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="center big">Bobo</h1>
+    <hr />
+    <h1>Your Bobo: </h1><h3>Level: <div id="level">1</div></h3><img id="bobo" class="center" src="1.png"></img>
+    <br />
+    <hr />
+    <h1>Stats: </h1>
+    <h2>Hunger</h2> <h3><div id="hungerel">100</div>%</h3><div id="progresshunger"><div id="barhunger"></div></div>
+    <h2>Hygiene</h2> <h3><div id="hygieneel">100</div>%</h3><div id="progresshygiene"><div id="barhygiene"></div></div>
+    <h2>Happiness</h2> <h3><div id="happinessel">100</div>%</h3><div id="progresshappiness"><div id="barhappiness"></div></div>
+    <h2>Health</h2> <h3><div id="healthel">100</div>%</h3><div id="progresshealth"><div id="barhealth"></div></div>
+    <br />
+    <hr />
+    <h1>Specs: </h1>
+    
+    <h2>Attack</h2> <h3 id="attackel">1</h3><div id="progressattack"><div id="barattack"></div></div>
+    <h2>Shield</h2> <h3 id="shieldel">1</h3><div id="progressshield"><div id="barshield"></div></div>
+    <h2>Range</h2> <h3 id="rangeel">1</h3><div id="progressrange"><div id="barrange"></div></div>
+    <script src="main.js"></script>
+    <h2>Food: <div id="berries">0</div> Berries</h2>
+    <h1><button onclick="bobo.feed();">Feed</button></h1>
+    <sound><source src="PowerUp.wav"></sound>
+  </body>
+</html>
