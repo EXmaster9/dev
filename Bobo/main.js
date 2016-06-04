@@ -13,4 +13,3 @@
 var bobo = {};
 bobo.hunger = 100;
 bobo.level = 1;
-bobo.
