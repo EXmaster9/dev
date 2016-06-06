@@ -39,9 +39,10 @@
 	      border-color: #071108;
 	      border-width: 2px;
 	      background-color: #C0C1CE;
-	      -moz-transition: padding 2s, background-color 2s;
-        -webkit-transition: padding 2s, background-color 2s;
-        transition: padding 2s, background-color 2s;
+	      -moz-transition: padding 2s, background-color 2s, border-radius 2s;
+        -webkit-transition: padding 2s, background-color 2s, border-radius 2s;
+        transition: padding 2s, background-color 2s, border-radius 2s;
+        
       }
       .big {
         font-size: 72px;
@@ -224,6 +225,10 @@
       #bobo:hover {
         padding: 50px 50px 50px 50px;
         background-color: #071108;
+        -moz-border-radius: 40px;
+	      -webkit-border-radius: 40px;
+	      border-radius: 40px;
+        
       }
       button {
         -moz-border-radius: 5px;
@@ -231,9 +236,9 @@
 	      border-radius: 5px;
 	      padding-top: 5px;
 	      padding-left: 7px;
-        -moz-transition: background-color 1s, color 3s;
-        -webkit-transition: background-color 1s, color 3s;
-        transition: background-color 1s, color 3s;
+        -moz-transition: background-color 0.5s, color 0.5s;
+        -webkit-transition: background-color 0.5s, color 0.5s;
+        transition: background-color 0.5s, color 0.5s;
         background-color: #003ABA;
         border-style: none;
         font-family: Font;
@@ -249,6 +254,32 @@
       button:active {
         -moz-border-radius: 10px;
 	      -webkit-border-radius: 10px;
+	      border-radius: 10px;
+      }
+      #progressstealth {
+        background: -webkit-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -o-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: -moz-linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6); 
+        background: linear-gradient(-90deg, #B8BAC6, #9A9BA5, #B8BAC6);
+        position: relative;
+        width: 100%;
+        height: 30px;
+        background-color: #C0C1CE;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
+      }
+      #barstealth {
+        position: absolute;
+        width: 1%;
+        height: 100%;
+        background-color: #004FFF;
+        -moz-transition: width 2s;
+        -webkit-transition: width 2s;
+        transition: width 2s;
+        -moz-border-radius: 5px;
+	      -webkit-border-radius: 5px;
+	      border-radius: 5px;
       }
     </style>
   </head>
@@ -265,14 +296,27 @@
     <h2>Health</h2> <h3><div id="healthel">100</div>%</h3><div id="progresshealth"><div id="barhealth"></div></div>
     <br />
     <hr />
+    <img src="coin.png"></img><h2><div id="coins">100</div> Coins</h2>
+    <br />
+    <hr />
     <h1>Specs: </h1>
-    
     <h2>Attack</h2> <h3 id="attackel">1</h3><div id="progressattack"><div id="barattack"></div></div>
     <h2>Shield</h2> <h3 id="shieldel">1</h3><div id="progressshield"><div id="barshield"></div></div>
     <h2>Range</h2> <h3 id="rangeel">1</h3><div id="progressrange"><div id="barrange"></div></div>
+    <h2>Stealth</h2> <h3 id="stealthel">1</h3><div id="progressstealth"><div id="barstealth"></div></div>
+    <br /><hr />
+    <h2>Steak: <div id="steak">0</div></h2>
+    <h1><button id="feedbutton">Feed</button></h1>
+    <br /><hr />
+    <h1><button id="huntbutton">Hunt</button></h1>
+    <br /><hr />
+    <h2>Toys: <div id="toys">0</div></h2>
+    <h1><button id="playbutton">Play</button></h1>
+    <br /><hr />
+    <h2>Soap Bars: <div id="soapbars">0</div></h2>
+    <h1><button id="bathebutton">Bathe</button></h1>
+    <h5>v0.2</h5>
+    <audio id="powerup"><source src="PowerUp.wav"></audio>
     <script src="main.js"></script>
-    <h2>Food: <div id="berries">0</div> Berries</h2>
-    <h1><button onclick="bobo.feed();">Feed</button></h1>
-    <sound><source src="PowerUp.wav"></sound>
   </body>
 </html>
