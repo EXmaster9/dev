@@ -31,9 +31,6 @@
       font-family: Exo;
       color: white;
     }
-    body {
-      background: url(http://www.magic4walls.com/wp-content/uploads/2014/02/texture-dark-noise-background-metal.jpg);
-    }
     #taco:active {
       border-style: ridge;
       border-color: lightblue;
@@ -57,31 +54,26 @@
     font-family: Quicksand;
     src: url(Quicksand-Regular.otf);
     }
-    button.q {
+/*     button.q {
       color: lightgreen;
       border-color: darkgreen;
-    }
+    } */
     button {
       font-family: Quicksand;
-      border-width: 5px;
-      border-style: groove;
-      background-color: #3B3B3B;
+      border-radius: 5px;
+      background-color: #27564B;
       color: white;
     }
-    button.h {
+/*     button.h {
       color: darkblue;
       border-color: darkblue;
-    }
+    } */
     button:active {
       border-style: inset;
     }
-    #darkener {
-      background-color: rgba(6, 5, 33, 0.56);
-    }
     </style>
   </head>
-  <div id="darkener">
-    <body id="body">
+    <body>
     <h1 id="title" class="center exo">Taco Tapper</h1>
     <button><h1 class="center exo" onclick="taco.reset();">Reset</h1></button>
     <hr style="color: gray;"/>
@@ -111,7 +103,5 @@
     <br />
     <footer><h4 class="exo">v0.6</h4></footer>
     <script src="index.js"></script>
-    
   </body>
-</div>
 </html>
